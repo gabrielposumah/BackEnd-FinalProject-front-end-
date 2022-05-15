@@ -8,10 +8,13 @@ import {
   SignUp,
   Welcome,
   SignIn,
+  List,
+  Ticket,
 } from '../pages';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BottomNavigator} from '../components';
+import Order from '../pages/Order';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -65,6 +68,26 @@ const Router = () => {
       <Stack.Screen
         name="Home"
         component={Home}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Pesanan"
+        component={Pesanan}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="List"
+        component={List}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Ticket"
+        component={Ticket}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Order"
+        component={Order}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

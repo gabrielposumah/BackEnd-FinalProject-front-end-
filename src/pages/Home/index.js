@@ -47,16 +47,22 @@ const Home = ({navigation, onPress}) => {
       </View> */}
       <View style={styles.container}>
         <View style={styles.bagian}>
-          <ButtonIcon title="List" />
+          <ButtonIcon
+            title="Daftar"
+            onPress={() => navigation.navigate('List')}
+          />
         </View>
         <View style={styles.bagian}>
           <ButtonIcon
-            title="Payment"
+            title="Pesanan"
             onPress={() => navigation.navigate('Pesanan')}
           />
         </View>
         <View style={styles.bagian}>
-          <ButtonIcon title="Ticket" />
+          <ButtonIcon
+            title="Tiket"
+            onPress={() => navigation.navigate('Ticket')}
+          />
         </View>
         <View style={styles.bagian}>
           <ButtonIcon
@@ -130,14 +136,5 @@ const styles = StyleSheet.create({
     shadowRadius: 11.14,
 
     elevation: 17,
-  },
-  button: {
-    backgroundColor: '#EAEBED',
-  },
-  KmSaintMary: {
-    width: '90%',
-    borderRadius: 10,
-    height: 110,
-    marginVertical: 5,
   },
 });
